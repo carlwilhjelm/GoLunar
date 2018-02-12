@@ -7,11 +7,14 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.layout.BorderPane;
 
-
+/*
+ * Main class loads scene using JavaFX library
+ */
 public class Main extends Application {
 	@Override
 	public void start(Stage primaryStage) {
 		try {
+			//connects to FXML file to load scene
 			Parent root = FXMLLoader.load(getClass().getResource("/application/Main.fxml"));
 			Scene scene = new Scene(root);
 			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
