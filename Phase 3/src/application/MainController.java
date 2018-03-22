@@ -9,6 +9,7 @@ import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.CheckBox;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
@@ -31,6 +32,7 @@ public class MainController implements Initializable {
 							endMinBox, endPBox;
 	
 	public TextField classSectionField, classTitleField, minCredField, maxCredField;
+	public CheckBox cbMon, cbTues, cbWed, cbThurs, cbFri, cbSat, cbSun;
 	
 	@FXML
 	private TableView<ClassDetails> classResultsTable;
@@ -233,7 +235,7 @@ public class MainController implements Initializable {
 	/*
 	 * Postcondition: Uses selection from checkbox Monday to alter final query
 	 */
-	public void cbMon(ActionEvent event) throws SQLException {
+	public void cbMonCheck(ActionEvent event) throws SQLException {
 		System.out.println("Monday added");
 		classSelectionModel.setQueryControl('o', "M");
 	}
@@ -241,7 +243,7 @@ public class MainController implements Initializable {
 	/*
 	 * Postcondition: Uses selection from checkbox Tuesday to alter final query
 	 */
-	public void cbTues(ActionEvent event) throws SQLException {
+	public void cbTuesCheck(ActionEvent event) throws SQLException {
 		System.out.println("Tuesday added");
 		classSelectionModel.setQueryControl('o', "T");
 	}
@@ -249,7 +251,7 @@ public class MainController implements Initializable {
 	/*
 	 * Postcondition: Uses selection from checkbox Wednesday to alter final query
 	 */
-	public void cbWed(ActionEvent event) throws SQLException {
+	public void cbWedCheck(ActionEvent event) throws SQLException {
 		System.out.println("Wednesday added");
 		classSelectionModel.setQueryControl('o', "W");
 	}
@@ -257,7 +259,7 @@ public class MainController implements Initializable {
 	/*
 	 * Postcondition: Uses selection from checkbox Thursday to alter final query
 	 */
-	public void cbThurs(ActionEvent event) throws SQLException {
+	public void cbThursCheck(ActionEvent event) throws SQLException {
 		System.out.println("Thursday added");
 		classSelectionModel.setQueryControl('o', "R");
 	}
@@ -265,7 +267,7 @@ public class MainController implements Initializable {
 	/*
 	 * Postcondition: Uses selection from checkbox Friday to alter final query
 	 */
-	public void cbFri(ActionEvent event) throws SQLException {
+	public void cbFriCheck(ActionEvent event) throws SQLException {
 		System.out.println("Friday added");
 		classSelectionModel.setQueryControl('o', "F");
 	}
@@ -273,7 +275,7 @@ public class MainController implements Initializable {
 	/*
 	 * Postcondition: Uses selection from checkbox Saturday to alter final query
 	 */
-	public void cbSat(ActionEvent event) throws SQLException {
+	public void cbSatCheck(ActionEvent event) throws SQLException {
 		System.out.println("Saturday added");
 		classSelectionModel.setQueryControl('o', "S");
 	}
@@ -281,7 +283,7 @@ public class MainController implements Initializable {
 	/*
 	 * Postcondition: Uses selection from checkbox Sunday to alter final query
 	 */
-	public void cbSun(ActionEvent event) throws SQLException {
+	public void cbSunCheck(ActionEvent event) throws SQLException {
 		System.out.println("Sunday added");
 		classSelectionModel.setQueryControl('o', "U");
 	}

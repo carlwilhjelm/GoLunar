@@ -177,6 +177,7 @@ public class ClassSelectionModel {
 			case 'z':
 				queryControlArr = new String[controlN];
 				queryControlBldr = new StringBuilder();
+				daysBldr = new StringBuilder();
 				hasIJ = false;
 		}
 	}

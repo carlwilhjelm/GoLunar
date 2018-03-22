@@ -24,13 +24,13 @@
       <ComboBox fx:id="endHrBox" layoutX="15.0" layoutY="602.0" onAction="#endHrChanged" prefHeight="25.0" prefWidth="100.0" promptText="End Hour:" />
       <ComboBox fx:id="endMinBox" layoutX="140.0" layoutY="602.0" onAction="#endMinChanged" prefHeight="25.0" prefWidth="80.0" promptText="Minute" />
       <ComboBox fx:id="endPBox" layoutX="240.0" layoutY="602.0" onAction="#endPChanged" prefHeight="25.0" prefWidth="90.0" promptText="am/pm" />
-      <CheckBox fx:id="mon" layoutX="17.0" layoutY="674.0" mnemonicParsing="false" onAction="#cbMon" text="Mon" />
-      <CheckBox fx:id="tues" layoutX="83.0" layoutY="674.0" mnemonicParsing="false" onAction="#cbTues" text="Tues" />
-      <CheckBox fx:id="Wed" layoutX="149.0" layoutY="674.0" mnemonicParsing="false" onAction="#cbWed" text="Wed" />
-      <CheckBox fx:id="thurs" layoutX="219.0" layoutY="674.0" mnemonicParsing="false" onAction="#cbThurs" text="Thurs" />
-      <CheckBox fx:id="fri" layoutX="290.0" layoutY="674.0" mnemonicParsing="false" onAction="#cbFri" text="Fri" />
-      <CheckBox fx:id="sat" layoutX="17.0" layoutY="716.0" mnemonicParsing="false" onAction="#cbSat" text="Sat" />
-      <CheckBox fx:id="sun" layoutX="83.0" layoutY="716.0" mnemonicParsing="false" onAction="#cbSun" text="Sun" />
+      <CheckBox fx:id="cbMon" layoutX="17.0" layoutY="674.0" mnemonicParsing="false" onAction="#cbMonCheck" text="Mon" />
+      <CheckBox fx:id="cbTues" layoutX="83.0" layoutY="674.0" mnemonicParsing="false" onAction="#cbTuesCheck" text="Tues" />
+      <CheckBox fx:id="cbWed" layoutX="149.0" layoutY="674.0" mnemonicParsing="false" onAction="#cbWedCheck" text="Wed" />
+      <CheckBox fx:id="cbThurs" layoutX="219.0" layoutY="674.0" mnemonicParsing="false" onAction="#cbThursCheck" text="Thurs" />
+      <CheckBox fx:id="cbFri" layoutX="290.0" layoutY="674.0" mnemonicParsing="false" onAction="#cbFriCheck" text="Fri" />
+      <CheckBox fx:id="cbSat" layoutX="17.0" layoutY="716.0" mnemonicParsing="false" onAction="#cbSatCheck" text="Sat" />
+      <CheckBox fx:id="cbSun" layoutX="83.0" layoutY="716.0" mnemonicParsing="false" onAction="#cbSunCheck" text="Sun" />
       <Button fx:id="searchBtn" layoutX="15.0" layoutY="753.0" mnemonicParsing="false" onAction="#search" text="Section Search" />
       <Button fx:id="reset" layoutX="127.0" layoutY="753.0" mnemonicParsing="false" onAction="#reset" text="Reset" />
       <TableView fx:id="classResultsTable" layoutX="195.0" layoutY="44.0" prefHeight="460.0" prefWidth="868.0">
