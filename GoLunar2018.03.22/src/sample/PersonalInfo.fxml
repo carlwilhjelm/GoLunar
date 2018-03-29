@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Personal_Info_Controller">
+    <children>
+        <SplitPane dividerPositions="0.12311557788944724" orientation="VERTICAL" prefHeight="700.0" prefWidth="1125.0">
+            <items>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="156.0" prefWidth="601.0">
+                    <children>
+                        <Button fx:id="bMain" layoutX="6.0" layoutY="9.0" mnemonicParsing="false" onAction="#mainBClicked" text="Main" />
+                        <Button fx:id="bRecords" layoutX="60.0" layoutY="9.0" mnemonicParsing="false" onAction="#recordsBClicked" text="Student Records" />
+                        <Button fx:id="bPerInfo" layoutX="188.0" layoutY="9.0" mnemonicParsing="false" onAction="#infoBClicked" text="Personal Information" />
+                    <Button fx:id="bRegistration" layoutX="344.0" layoutY="9.0" mnemonicParsing="false" onAction="#registrationBClicked" text="Registration" />
+                    </children>
+                </AnchorPane>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="258.0" prefWidth="601.0">
+                    <children>
+                        <Hyperlink layoutX="30.0" layoutY="40.0" text="Change Home Address" />
+                        <Hyperlink layoutX="30.0" layoutY="65.0" text="Add/Change Emergency Contacts" />
+                        <Hyperlink layoutX="30.0" layoutY="90.0" />
+                    </children>
+                </AnchorPane>
+            </items>
+        </SplitPane>
+        <Label layoutX="17.0" layoutY="58.0" text="Personal Information">
+            <font>
+                <Font name="Cochin" size="22.0" />
+            </font>
+        </Label>
+        <AnchorPane layoutX="964.0" prefHeight="700.0" prefWidth="160.0" style="-fx-background-color: #98dafc;">
+         <children>
+            <Button layoutX="101.0" layoutY="7.0" mnemonicParsing="false" onAction="#logoutClicked" text="Logout" />
+         </children></AnchorPane>
+    </children>
+
+</AnchorPane>

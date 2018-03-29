@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="1125.0" prefWidth="650.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Transcript_Controller">
+   <children>
+      <ScrollPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="1125.0" prefWidth="700.0">
+        <content>
+          <AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="0.0" minWidth="0.0" prefHeight="500.0" prefWidth="500.0" scaleX="0.0" />
+        </content>
+      </ScrollPane>
+      <Label layoutX="30.0" layoutY="30.0" text="Transcript">
+         <font>
+            <Font name="Cochin" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="30.0" layoutY="90.0" text="Student Information">
+         <font>
+            <Font name="Cochin" size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="name" layoutX="75.0" layoutY="120.0" text="">
+         <font>
+            <Font name="Cochin" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="35.0" layoutY="120.0" text="Name:">
+         <font>
+            <Font name="Cochin" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="35.0" layoutY="145.0" text="Age:">
+         <font>
+            <Font name="Cochin" size="13.0" />
+         </font>
+      </Label>
+      <Label fx:id="age" layoutX="65.0" layoutY="145.0" text="age">
+         <font>
+            <Font name="Cochin" size="13.0" />
+         </font>
+      </Label>
+      <AnchorPane layoutX="1125.0" prefHeight="700.0" prefWidth="123.0" style="-fx-background-color: #98dafc;" />
+      <Label layoutX="35.0" layoutY="170.0" text="Major:">
+         <font>
+            <Font name="Cochin" size="13.0" />
+         </font>
+      </Label>
+      <Label fx:id="major" layoutX="75.0" layoutY="170.0" text="major">
+         <font>
+            <Font name="Cochin" size="13.0" />
+         </font>
+      </Label>
+      <TableView fx:id="table" layoutX="10.0" layoutY="200.0" prefHeight="200.0" prefWidth="689.0">
+        <columns>
+          <TableColumn fx:id="subject" prefWidth="86.0" sortable="false" text="Subject" />
+          <TableColumn fx:id="crn" prefWidth="99.0" sortable="false" text="CRN" />
+            <TableColumn fx:id="title" prefWidth="296.9999694824219" sortable="false" text="Title" />
+            <TableColumn fx:id="grade" minWidth="7.0" prefWidth="89.0" text="Grade" />
+            <TableColumn fx:id="credit" prefWidth="117.0" text="Credit Hours" />
+        </columns>
+      </TableView>
+      <Label layoutX="620.0" layoutY="180.0" text="Fall 2017">
+         <font>
+            <Font size="18.0" />
+         </font></Label>
+      <TableView layoutX="10.0" layoutY="450.0" prefHeight="200.0" prefWidth="689.0">
+         <columns>
+            <TableColumn fx:id="subject1" prefWidth="86.0" text="Subject" />
+            <TableColumn fx:id="crn1" prefWidth="99.0" text="CRN" />
+            <TableColumn fx:id="title1" prefWidth="296.9999694824219" text="Title" />
+            <TableColumn fx:id="grade1" minWidth="7.0" prefWidth="89.0" text="Grade" />
+            <TableColumn fx:id="credit1" prefWidth="117.0" text="Credit Hours" />
+         </columns>
+      </TableView>
+      <TableView layoutX="10.0" layoutY="700.0" prefHeight="200.0" prefWidth="689.0">
+         <columns>
+            <TableColumn fx:id="subject2" prefWidth="86.0" text="Subject" />
+            <TableColumn fx:id="course2" prefWidth="99.0" text="Course" />
+            <TableColumn fx:id="title2" prefWidth="296.9999694824219" text="Title" />
+            <TableColumn fx:id="grade2" minWidth="7.0" prefWidth="89.0" text="Grade" />
+            <TableColumn fx:id="credit2" prefWidth="117.0" text="Credit Hours" />
+         </columns>
+      </TableView>
+      <Label layoutX="620.0" layoutY="680.0" text="Fall 2018">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="595.0" layoutY="430.0" text="Spring 2018">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="763.0" prefWidth="1106.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.ConciseSchedule_controller">
+   <children>
+      <AnchorPane layoutX="978.0" prefHeight="763.0" prefWidth="128.0" style="-fx-background-color: #98dafc;" />
+      <SplitPane dividerPositions="0.07227332457293036" layoutX="-8.0" orientation="VERTICAL" prefHeight="763.0" prefWidth="986.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+               <children>
+                   <Button fx:id="bMain" layoutX="16.0" layoutY="9.0" mnemonicParsing="false" onAction="#mainBClicked" text="Main" />
+                   <Button fx:id="bRecords" layoutX="70.0" layoutY="9.0" mnemonicParsing="false" onAction="#recordsBClicked" text="Student Records" />
+                   <Button fx:id="bPerInfo" layoutX="198.0" layoutY="9.0" mnemonicParsing="false" onAction="#infoBClicked" text="Personal Information" />
+                   <Button fx:id="bRegistration" layoutX="350.0" layoutY="9.0" mnemonicParsing="false" onAction="#registrationBClicked" text="Registration" />
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="699.0" prefWidth="984.0">
+               <children>
+                  <TableView fx:id="table" layoutX="14.0" layoutY="131.0" onMouseClicked="#clickItem" prefHeight="344.0" prefWidth="957.0">
+                     <columns>
+                        <TableColumn fx:id="crnCol" prefWidth="75.0" sortable="false" text="CRN" />
+                        <TableColumn fx:id="subjectCol" prefWidth="107.0" text="Subject" />
+                        <TableColumn fx:id="courseCol" prefWidth="209.0" text="Course Title" />
+                        <TableColumn fx:id="creditsCol" prefWidth="68.0" text="Credits" />
+                        <TableColumn fx:id="daysCol" prefWidth="81.0" text="Days" />
+                        <TableColumn fx:id="timeCol" prefWidth="116.0" text="Time" />
+                        <TableColumn fx:id="locationCol" prefWidth="137.0" text="Location" />
+                        <TableColumn fx:id="instructorCol" prefWidth="163.0" text="Instructor" />
+                     </columns></TableView>
+                  <Label layoutX="50.0" layoutY="32.0" text="Concise Student Schedule">
+                     <font>
+                        <Font name="Cochin" size="27.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="50.0" layoutY="64.0" text="Student ID:">
+                     <font>
+                        <Font name="Cochin" size="13.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="128.0" layoutY="64.0" />
+                  <Label fx:id="studentIDlabel" layoutX="128.0" layoutY="64.0" text="Label">
+                     <font>
+                        <Font name="Cochin" size="13.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+    <AnchorPane layoutX="964.0" prefHeight="700.0" prefWidth="160.0" style="-fx-background-color: #98dafc;">
+        <children>
+            <Button layoutX="101.0" layoutY="7.0" mnemonicParsing="false" text="Logout" onAction="#logoutClicked" />
+        </children></AnchorPane>
+</AnchorPane>
