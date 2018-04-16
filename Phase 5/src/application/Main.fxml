@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="800.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MainController">
+   <children>
+      <ComboBox fx:id="termBox" layoutX="15.0" layoutY="47.0" onAction="#termChanged" prefWidth="150.0" promptText="Search by Term" />
+      <ComboBox fx:id="degreeBox" layoutX="15.0" layoutY="112.0" onAction="#degChanged" prefWidth="150.0" promptText="Degree" />
+      <ComboBox fx:id="subjectBox" layoutX="15.0" layoutY="179.0" onAction="#subChanged" prefWidth="150.0" promptText="Subject" />
+      <TextField fx:id="classSectionField" layoutX="15.0" layoutY="249.0" onAction="#sectionChanged" promptText="Section" />
+      <TextField fx:id="classTitleField" layoutX="15.0" layoutY="316.0" onAction="#titleChanged" promptText="Class Name" />
+      <TextField fx:id="minCredField" layoutX="15.0" layoutY="366.0" onAction="#minCredChanged" promptText="Credit Range From:" />
+      <TextField fx:id="maxCredField" layoutX="15.0" layoutY="428.0" onAction="#maxCredChanged" promptText="Credit Range To:" />
+      <ComboBox fx:id="instructorBox" layoutX="15.0" layoutY="488.0" onAction="#instChanged" prefWidth="150.0" promptText="Instructor:" />
+      <ComboBox fx:id="startHrBox" layoutX="15.0" layoutY="546.0" onAction="#startHrChanged" prefHeight="25.0" prefWidth="100.0" promptText="Start Hour:" />
+      <ComboBox fx:id="startMinBox" layoutX="140.0" layoutY="546.0" onAction="#startMinChanged" prefHeight="25.0" prefWidth="80.0" promptText="Minute" />
+      <ComboBox fx:id="startPBox" layoutX="240.0" layoutY="546.0" onAction="#startPChanged" prefHeight="25.0" prefWidth="90.0" promptText="am/pm" />
+      <ComboBox fx:id="endHrBox" layoutX="15.0" layoutY="602.0" onAction="#endHrChanged" prefHeight="25.0" prefWidth="100.0" promptText="End Hour:" />
+      <ComboBox fx:id="endMinBox" layoutX="140.0" layoutY="602.0" onAction="#endMinChanged" prefHeight="25.0" prefWidth="80.0" promptText="Minute" />
+      <ComboBox fx:id="endPBox" layoutX="240.0" layoutY="602.0" onAction="#endPChanged" prefHeight="25.0" prefWidth="90.0" promptText="am/pm" />
+      <CheckBox fx:id="cbMon" layoutX="17.0" layoutY="674.0" mnemonicParsing="false" onAction="#cbMonCheck" text="Mon" />
+      <CheckBox fx:id="cbTues" layoutX="83.0" layoutY="674.0" mnemonicParsing="false" onAction="#cbTuesCheck" text="Tues" />
+      <CheckBox fx:id="cbWed" layoutX="149.0" layoutY="674.0" mnemonicParsing="false" onAction="#cbWedCheck" text="Wed" />
+      <CheckBox fx:id="cbThurs" layoutX="219.0" layoutY="674.0" mnemonicParsing="false" onAction="#cbThursCheck" text="Thurs" />
+      <CheckBox fx:id="cbFri" layoutX="290.0" layoutY="674.0" mnemonicParsing="false" onAction="#cbFriCheck" text="Fri" />
+      <CheckBox fx:id="cbSat" layoutX="17.0" layoutY="716.0" mnemonicParsing="false" onAction="#cbSatCheck" text="Sat" />
+      <CheckBox fx:id="cbSun" layoutX="83.0" layoutY="716.0" mnemonicParsing="false" onAction="#cbSunCheck" text="Sun" />
+      <Button fx:id="searchBtn" layoutX="15.0" layoutY="753.0" mnemonicParsing="false" onAction="#search" text="Section Search" />
+      <Button fx:id="reset" layoutX="127.0" layoutY="753.0" mnemonicParsing="false" onAction="#reset" text="Reset" />
+      <TableView fx:id="classResultsTable" layoutX="195.0" layoutY="44.0" onMouseClicked="#clickItem" prefHeight="460.0" prefWidth="868.0">
+        <columns>
+            <TableColumn fx:id="classIDCol" prefWidth="75.0" text="Class ID" />
+          <TableColumn fx:id="classNameCol" prefWidth="119.0" text="Class Name" />
+            <TableColumn fx:id="classSectionCol" prefWidth="75.0" text="Class Section" />
+            <TableColumn fx:id="classEmployeeIdCol" prefWidth="81.0" text="Instructor" />
+            <TableColumn fx:id="classDaysCol" minWidth="0.0" prefWidth="69.0" text="Days" />
+            <TableColumn fx:id="classTimeCol" prefWidth="75.0" text="Time" />
+            <TableColumn fx:id="classRoomCol" prefWidth="75.0" text="Room" />
+            <TableColumn fx:id="classDescriptionCol" prefWidth="89.0" text="Description" />
+            <TableColumn fx:id="classCreditHoursCol" prefWidth="85.0" text="Credit Hours" />
+            <TableColumn fx:id="classPrerequisitesCol" prefWidth="124.0" text="Prerequisites" />
+        </columns>
+      </TableView>
+       <Button layoutX="192.0" layoutY="753.0" mnemonicParsing="false" onAction="#registrationBClicked" text="Back to Registration Menu">
+           <font>
+               <Font size="12.0" />
+           </font>
+       </Button>
+      <Button layoutX="762.0" layoutY="753.0" mnemonicParsing="false" onAction="#addDropClicked" text="Add Selected Classes to Worksheet">
+         <font>
+            <Font size="12.0" />
+         </font>
+      </Button>
+      <TextField fx:id="classSelection1" layoutX="780.0" layoutY="534.0" prefHeight="25.0" prefWidth="165.0" promptText="Enter Section Number Here" />
+      <TextField fx:id="classSelection2" layoutX="780.0" layoutY="590.0" prefHeight="25.0" prefWidth="165.0" promptText="Enter Section Number Here" />
+      <TextField fx:id="classSelection3" layoutX="780.0" layoutY="649.0" prefHeight="25.0" prefWidth="165.0" promptText="Enter Section Number Here" />
+      <TextField fx:id="classSelection4" layoutX="780.0" layoutY="704.0" prefHeight="25.0" prefWidth="165.0" promptText="Enter Section Number Here" />
+   </children>
+</AnchorPane>

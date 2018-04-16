@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="763.0" prefWidth="1106.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.AddDrop_Controller">
+
+    <children>
+        <SplitPane dividerPositions="0.13272010512483573" orientation="VERTICAL" prefHeight="763.0" prefWidth="957.0">
+            <items>
+                <AnchorPane minHeight="0.0" minWidth="0.0">
+                        <children>
+                            <Button fx:id="bMain" layoutX="6.0" layoutY="9.0" mnemonicParsing="false" onAction="#mainBClicked" text="Main" />
+                            <Button fx:id="bRecords" layoutX="60.0" layoutY="9.0" mnemonicParsing="false" onAction="#recordsBClicked" text="Student Records" />
+                            <Button fx:id="bPerInfo" layoutX="188.0" layoutY="9.0" mnemonicParsing="false" onAction="#infoBClicked" text="Personal Information" />
+                    <Button fx:id="bRegistration" layoutX="340.0" layoutY="9.0" mnemonicParsing="false" onAction="#registrationBClicked" text="Registration" />
+                        <Label layoutX="17.0" layoutY="58.0" text="Add or Withdraw">
+                            <font>
+                                <Font name="Cochin" size="22.0" />
+                            </font>
+                        </Label>
+                    </children>
+                </AnchorPane>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="656.0" prefWidth="983.0">
+                    <children>
+                        <TableView fx:id="table" layoutX="14.0" layoutY="131.0" onMouseClicked="#clickItem" prefHeight="307.0" prefWidth="775.0">
+                            <columns>
+                                <TableColumn fx:id="crnCol" prefWidth="69.99996948242188" sortable="false" text="CRN" />
+                                <TableColumn fx:id="subjectCol" prefWidth="90.00001525878906" text="Subject" />
+                                <TableColumn fx:id="courseCol" prefWidth="166.99998474121094" text="Course Title" />
+                                <TableColumn fx:id="creditsCol" prefWidth="53.0" text="Credits" />
+                                <TableColumn fx:id="daysCol" prefWidth="41.0" text="Days" />
+                                <TableColumn fx:id="timeCol" prefWidth="93.0" text="Time" />
+                                <TableColumn fx:id="locationCol" prefWidth="115.0" text="Location" />
+                                <TableColumn fx:id="instructorCol" prefWidth="145.0" text="Instructor" />
+                            </columns></TableView>
+                  <Label fx:id="addDropLabel" layoutX="26.0" layoutY="17.0" text="Label" />
+                  <ComboBox fx:id="action1" layoutX="790.0" layoutY="157.0" maxHeight="24.0" minHeight="24.0" prefHeight="24.0" prefWidth="150.0" value="None" visible="false" />
+                  <ComboBox fx:id="action2" layoutX="790.0" layoutY="181.0" maxHeight="24.0" minHeight="24.0" prefHeight="24.0" prefWidth="150.0" value="None" visible="false" />
+                  <ComboBox fx:id="action3" layoutX="790.0" layoutY="205.0" maxHeight="24.0" minHeight="24.0" prefHeight="24.0" prefWidth="150.0" value="None" visible="false" />
+                  <ComboBox fx:id="action4" layoutX="790.0" layoutY="229.0" maxHeight="24.0" minHeight="24.0" prefHeight="24.0" prefWidth="150.0" value="None" visible="false" />
+                  <Button fx:id="submitButton" layoutX="36.0" layoutY="572.0" mnemonicParsing="false" onAction="#submitButtonClicked" prefHeight="27.0" prefWidth="73.0" text="Submit" />
+                  <TextField fx:id="addClass1" layoutX="26.0" layoutY="517.0" prefHeight="27.0" prefWidth="129.0" />
+                  <TextField fx:id="addClass2" layoutX="171.0" layoutY="517.0" prefHeight="27.0" prefWidth="129.0" />
+                  <TextField fx:id="addClass3" layoutX="316.0" layoutY="517.0" prefHeight="27.0" prefWidth="129.0" />
+                  <TextField fx:id="addClass4" layoutX="461.0" layoutY="517.0" prefHeight="27.0" prefWidth="129.0" />
+                  <Button layoutX="171.0" layoutY="572.0" mnemonicParsing="false" text="Return To Registration Menu" />
+                  <Label layoutX="26.0" layoutY="478.0" prefHeight="17.0" prefWidth="291.0" text="Registration Worksheet to Add More Classes" />
+                  <Label fx:id="errorORNOT" layoutX="621.0" layoutY="478.0" prefHeight="17.0" prefWidth="217.0" text="Label" visible="false" />
+
+                    </children>
+                </AnchorPane>
+            </items>
+        </SplitPane>
+        <AnchorPane layoutX="956.0" prefHeight="763.0" prefWidth="150.0" style="-fx-background-color: #98dafc;">
+                <children>
+                    <Button layoutX="101.0" layoutY="7.0" mnemonicParsing="false" onAction="#logoutClicked" text="Logout" />
+
+                </children>
+        </AnchorPane>
+    </children>
+
+
+
+
+</AnchorPane>
